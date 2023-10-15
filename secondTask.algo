@@ -1,0 +1,19 @@
+ALGORITHM SUM_OF_UNIQUE
+VAR
+    SET1 : ARRAY_OF INTEGER[];
+    SET2 : ARRAY_OF INTEGER[];
+    sum: INTEGER : 0;
+    Unique : ARRAY_OF INTEGER[];
+BEGIN
+    FOR i FROM 0 TO SET1.length-1 STEP 1  DO
+        FOR j FROM 0 TO SET2.length-1 STEP 1  DO
+            IF (SET1[i] = SET2[j]) THEN
+                Unique[i] := SET1[i]
+            END_IF
+        END_FOR
+    END_FOR
+
+    FOR num FROM 0 TO Unique.length-1 STEP 1  DO
+        sum : sum + Unique[num]
+    END_FOR
+END

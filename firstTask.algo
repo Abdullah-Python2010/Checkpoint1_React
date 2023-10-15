@@ -1,0 +1,22 @@
+ALGORITHM Sentence_reader
+VAR
+    sentence : STRING[];
+    num_cons: INTEGER;
+    num_words: INTEGER : 1;
+    num_vowels: INTEGER;
+BEGIN
+    FOR i FROM 0 TO sentence.length-1 STEP 1  DO
+        WHILE (sentence[i] <> '.') DO
+            IF (sentence[i] = ' ') THEN
+                num_words : num_words + 1
+            ELSE_IF (sentence[i] = 'a' OR 'e' OR 'i' OR 'o' OR 'u' OR 'A' OR 'E' OR 'I' OR 'O' OR 'U') THEN
+                num_vowels : num_vowels + 1
+            ELSE
+                num_cons : num_cons + 1
+                Write('Consonant')
+            END_IF
+        END_WHILE
+    END_FOR
+END
+
+
